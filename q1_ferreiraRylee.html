@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+<title>Supernatural Trivia Quiz</title>
+<style type="text/css">
+	body{
+	    background-image :  url(http://giphy.com/gifs/title-card-HCAAEP2M7FruE);
+	    background-repeat : no-repeat;
+	background-size: 100% 100%;      
+	position:absolute; 
+	margin-left: 5%;
+	margin-top: 5%;
+	color:white;
+	font-size:20px;
+	font-family:Georgia;
+	}
+</style>
+<script>
+
+
+
+
+i = 1 // counter variable
+
+function main(){  // main part of program
+if (i==1){ 
+	document.view.qnum.value=i;  // puts question # in text box
+	document.view.question.value= "What is an example of an optical drive?\na) DVD player\nb) Video card\nc) Monitor\nd) Gaming controllers ";
+
+	// above code puts the question in the textarea, note the use of \n for "new line"
+
+	correct="a"  // assigns the correct answer
+
+	ans=prompt(i+'.)    ENTER LETTER >>   a,   b,   c,   d')  // gives user a chance to answer
+
+}// end of question 1
+
+	document.view.go.focus();  // puts the focus on the "Next Question >" button so the enter key will activate it
+
+	if (correct==ans){  // compares the real answer to the users answer
+
+		document.view.question.value =" You are right!"  // puts comment in textarea
+	}
+	else{
+		document.view.question.value =" You are wrong"  // puts comment in textarea
+	}
+
+	i++; // keeps track of number of questions asked
+
+} //end of main function
+
+
+
+</script>
+</head>
+<body LINK="F7DD5E" VLINK="F7DD5E" ALINK="F7DD5E" onLoad="main()">
+
+<FORM name="view">  
+	Question: &nbsp;<input type="text" name="qnum" size="2">&nbsp;&nbsp;<input type="button" name="go" value="Next Question >" onClick=main()>
+	<br><br>
+	<TEXTAREA COLS=36 ROWS=9 name="question" wrap="virtual">What is an example of an optical drive? 
+    
+  a) DVD player\nb) Video card\nc) Monitor\nd) Gaming controllers</TEXTAREA> 
+</FORM> 
+
+</body>
+</html>
